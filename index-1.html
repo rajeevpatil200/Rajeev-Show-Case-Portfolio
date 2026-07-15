@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rajeev Patil | Portfolio</title>
+
+<style>
+
+/* ================= BODY ================= */
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+
+    background:#0f172a;
+
+    color:#e2e8f0;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+
+    background:#111827;
+
+    position:sticky;
+    top:0;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.navbar a{
+
+    color:#e2e8f0;
+
+    text-decoration:none;
+
+    margin-left:18px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#ff8c00;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+
+    padding:60px 10%;
+
+    display:none;
+}
+
+/* ================= HEADINGS ================= */
+
+h1,h2,h3{
+    color:#38bdf8;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+
+    background:#1e293b;
+
+    padding:25px;
+
+    margin-top:20px;
+
+    border-radius:14px;
+
+    box-shadow:0 0 12px rgba(0,0,0,0.4);
+
+    line-height:1.8;
+}
+
+/* ================= GRID ================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+}
+
+/* ================= BUTTON LINKS ================= */
+
+.card a{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    background:#0ea5e9;
+
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.card a:hover{
+
+    background:#ff8c00;
+
+    color:black;
+}
+
+/* ================= IMAGE ================= */
+
+img{
+
+    border-radius:18px;
+
+    border:4px solid #38bdf8;
+
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    text-align:center;
+}
+
+/* ================= TYPING TEXT ================= */
+
+.typing-text{
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    margin-top:25px;
+
+    color:#ff8c00;
+
+    text-shadow:0 0 10px rgba(255,140,0,0.5);
+}
+
+/* ================= TAGS ================= */
+
+.tag{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    margin:6px;
+
+    border-radius:30px;
+
+    background:#334155;
+
+    color:#38bdf8;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    .navbar div{
+        margin-top:10px;
+    }
+
+    .typing-text{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+<script>
+
+function showSection(id){
+
+    let sections=document.getElementsByClassName("section");
+
+    for(let s of sections){
+        s.style.display="none";
+    }
+
+    document.getElementById(id).style.display="block";
+}
+
+/* ===== AUTO TYPING ===== */
+
+const text="AI • ML • Data Science • Research";
+
+let index=0;
+
+function typeEffect(){
+
+    if(index<text.length){
+
+        document.querySelector(".typing-text").innerHTML+=text.charAt(index);
+
+        index++;
+
+        setTimeout(typeEffect,100);
+    }
+}
+
+window.onload=function(){
+
+    showSection('home');
+
+    typeEffect();
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+
+<div class="logo">
+RAJEEV PATIL
+</div>
+<div>
+<a href="#" onclick="showSection('home')">Home</a>
+
+<a href="#" onclick="showSection('about')">About</a>
+
+<a href="#" onclick="showSection('skills')">Skills</a>
+
+<a href="#" onclick="showSection('projects')">Projects</a>
+
+<a href="#" onclick="showSection('research')">Research</a>
+
+<a href="#" onclick="showSection('certifications')">Certifications</a>
+
+<a href="#" onclick="showSection('achievements')">Achievements</a>
+
+<a href="#" onclick="showSection('contact')">Contact</a>
+
+</div>
+
+</div>
+
+<!-- ================= HOME ================= -->
+
+<div id="home" class="section">
+
+<div class="hero">
+
+<img src="Professional Photo.jpg" width="220">
+
+<h1>Rajeev Patil</h1>
+
+<h2>AI/ML Engineer & Data Analyst</h2>
+
+<div class="typing-text"></div>
+
+<p>
+Focused on building innovative and scalable AI-powered solutions
+through Machine Learning, Data Science,
+Deep Learning, and intelligent systems
+to address real-world technological challenges.
+</p>
+
+</div>
+
+</div>
+
+<!-- ================= ABOUT ME ================= -->
+
+<div id="about" class="section">
+
+<h1>About Me👨‍💻</h1>
+
+<div class="card">
+Driven and enthusiastic Computer Engineering student
+with strong expertise in Artificial Intelligence,
+Machine Learning, Data Science,
+and intelligent software solutions.
+
+Passionate about leveraging emerging technologies
+to design innovative, scalable,
+and research-oriented applications
+that solve real-world challenges effectively.
+
+Continuously focused on enhancing technical proficiency,
+analytical thinking,
+problem-solving capabilities,
+and practical implementation skills
+through hands-on projects,
+research activities,
+and continuous learning.
+
+</div>
+
+</div>
+
+<!-- ================= SKILLS ================= -->
+
+<div id="skills" class="section">
+
+<h1>Skills</h1>
+
+<div class="card">
+
+<div class="tag">🐍 Python</div>
+
+<div class="tag">🤖 Machine Learning</div>
+
+<div class="tag">🧠 Artificial Intelligence</div>
+
+<div class="tag">📊 Data Science</div>
+
+<div class="tag">🔍 Deep Learning</div>
+
+<div class="tag">👁️ Computer Vision</div>
+
+<div class="tag">🖼️ Image Processing</div>
+
+<div class="tag">🧬 Genetic Algorithm</div>
+
+<div class="tag">📈 Data Analytics</div>
+
+<div class="tag">📉 Power BI</div>
+
+<div class="tag">📚 Research</div>
+
+<div class="tag">📄 Technical Documentation</div>
+
+<div class="tag">💻 C++</div>
+
+<div class="tag">🌐 HTML</div>
+
+<div class="tag">🗄️ SQL</div>
+
+<div class="tag">📡 Cybersecurity</div>
+
+<div class="tag">📋 Problem Solving</div>
+
+<div class="tag">🤝 Teamwork</div>
+
+</div>
+
+</div>
+
+<!-- ================= PROJECTS ================= -->
+
+<div id="projects" class="section">
+
+<h1>Projects</h1>
+
+<div class="grid">
+
+    <!-- Project 1 -->
+    <div class="card">
+
+        <h3>Multiple Face Recognition using Genetic Algorithm</h3>
+
+        <p>
+        Designed and developed an intelligent multi-face recognition system
+        leveraging Genetic Algorithms and Machine Learning techniques
+        to enhance recognition accuracy,
+        feature optimization,
+        and computational efficiency.
+
+        Implemented advanced Computer Vision and Image Processing methodologies,
+        including feature extraction and optimization-based classification,
+        for accurate real-time multi-face detection and recognition.
+
+        This project strengthened my expertise in
+        Artificial Intelligence,
+        Machine Learning,
+        Computer Vision,
+        research-oriented development,
+        and intelligent system optimization through practical implementation
+        and analytical problem-solving.
+        </p>
+
+        <a href="https://drive.google.com/file/d/14nKOzL5yLBG4NauL8g2Qo_EIoVGqSyjs/view?usp=sharing">
+        📄 View Published Paper 
+        </a>
+
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card">
+
+        <h3>AI Powered Story Generator using NLP and Deep Learning</h3>
+
+        <p>
+        Developed an AI-powered Story Generator leveraging advanced Natural Language Processing (NLP), Deep Learning, and Generative AI techniques to create creative, coherent, and context-aware narratives based on user prompts.
+        The system was designed to enhance automated content generation by improving storytelling quality, semantic understanding, language fluency, and interactive user experience through intelligent text generation models and prompt-based narrative synthesis.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1AfA45rnQ_du8gUro-kMyTwtu2vTlKU1b/view?usp=sharing">
+        📄 View IEEE Paper
+        </a>
+
+    </div>
+
+    <!-- Project 3 -->
+    <div class="card">
+
+        <h3>Literature Survey on Comparative Analysis of Machine Learning Techniques</h3>
+
+        <p>
+        Conducted a comprehensive literature survey on the comparative analysis of various Machine Learning techniques, evaluating their accuracy, efficiency, scalability, and predictive performance across diverse datasets and real-world applications.
+
+        The study provided detailed insights into the strengths, limitations, and suitability of different algorithms for specific problem domains while identifying emerging trends, research challenges, optimization strategies, and future directions in the field of Machine Learning and Artificial Intelligence.
+        </p>
+
+        <a href="https://drive.google.com/file/d/17NnciVKbWKQdHixuCHTcq7PZRr93ODaI/view?usp=sharing">
+        📄 View Paper
+        </a>
+        
+    </div>
+
+</div>
+
+</div>
+
+<!-- ================= RESEARCH ================= -->
+
+<div id="research" class="section">
+
+<h1>Research 📄</h1>
+
+<div class="card">
+
+    <h3>Literature Survey on Comparative Analysis of Machine Learning Techniques</h3>
+
+    <p>
+    Conducted research on the comparative evaluation of various Machine Learning algorithms, analyzing their performance in terms of accuracy, computational efficiency, scalability, and predictive capabilities across different datasets and application domains.
+    The study highlighted the effectiveness, limitations, and practical suitability of different techniques for real-world intelligent systems and data-driven decision-making.
+    </p>
+
+    <a href="https://drive.google.com/file/d/17NnciVKbWKQdHixuCHTcq7PZRr93ODaI/view?usp=sharing" target="_blank">
+    📄 View Research Paper
+    </a>
+
+</div>
+
+</div>
+
+
+</div>
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<div id="certifications" class="section">
+
+<h1>Certifications</h1>
+
+<div class="grid">
+
+    <!-- Certificate 1 -->
+    <div class="card">
+
+        <h3>AWS Certified Cloud Practitioner</h3>
+
+        <p>
+        Successfully completed the certification focused on developing strong technical knowledge, practical implementation skills, and industry-oriented expertise in cloud computing, AWS services, security, architecture, and deployment models.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1TJtopESMjY0C8jpQOoMsLLjgrAkCLnes/view?usp=sharing" target="_blank">
+        📄 View Certificate
+        </a>
+
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="card">
+
+        <h3>Google AI/ML Virtual Internship</h3>
+
+        <p>
+        Successfully completed the certification focused on developing strong technical knowledge, practical implementation skills, and industry-oriented expertise in Artificial Intelligence, Machine Learning, and intelligent system development.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1RezSMHpIo9arVMdfyoQi9VPA3Pwbu9mS/view?usp=sharing">
+        📄 View Certificate
+        </a>
+
+    </div>
+
+    <!-- Certificate 3 -->
+    <div class="card">
+
+        <h3>CISCO Introduction to Cyber Security</h3>
+
+        <p>
+        Successfully completed the certification focused on developing strong technical knowledge, practical implementation skills, and industry-oriented expertise in cybersecurity fundamentals, network protection, and secure computing practices.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1W4oF12rW0ZhW2AC1OUkMi8jU_IXoF5Yj/view?usp=sharing" target="_blank">
+        📄 View Certificate
+        </a>
+
+    </div>
+
+    <!-- Certificate 4 -->
+    <div class="card">
+
+        <h3>Skill Metrix Blockchain Certificate</h3>
+
+        <p>
+        Successfully completed the certification focused on developing strong technical knowledge, practical implementation skills, and industry-oriented expertise in blockchain technology, decentralized systems, and secure digital transactions.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1sxoqm1IX0NGXrDmha0x8GxLpLrXPRfGj/view?usp=sharing" target="_blank">
+        📄 View Certificate
+        </a>
+
+    </div>
+
+    <!-- Certificate 5 -->
+    <div class="card">
+
+        <h3>Sustainable Energy Technology NPTEL</h3>
+
+        <p>
+        Successfully completed the certification focused on developing strong technical knowledge, practical implementation skills, and industry-oriented expertise in renewable energy systems, sustainable technologies, and modern energy solutions.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1b3d6h1KdkpxUE3fh9LQLANTKpNizS5ZG/view?usp=sharing" target="_blank">
+        📄 View Certificate
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<div id="achievements" class="section">
+
+<h1>Achievements 🏆</h1>
+
+<div class="grid">
+
+    <div class="card">
+
+        <h3>Major Project Research Paper Presentation in ICAICS Conference 2026</h3>
+
+        <p>
+        Presented a Research Paper at ICAICS 2026 (International Conference on Artificial Intelligence and Cybersecurity) on 7 March 2026 through an online presentation conducted via Microsoft Teams. 
+        The research highlighted innovative approaches in Machine Learning and intelligent systems, demonstrating analytical, research, and technical problem-solving capabilities in emerging AI-driven technologies.
+        </p>
+        
+        <a href="https://drive.google.com/file/d/14nKOzL5yLBG4NauL8g2Qo_EIoVGqSyjs/view?usp=sharing">
+        📄 View Published Paper
+        </a>
+    </div>
+
+    <div class="card">
+
+        <h3>Software Engineering Internal Hackathon Participation</h3>
+
+        <p>
+        Participated in a Software Engineering Internal Hackathon focused on developing an AI-Powered Customer Support Chatbot for E-Commerce platforms. 
+        The solution was designed to enhance customer engagement by providing intelligent real-time assistance, automated query resolution, personalized product recommendations, and efficient order-related support using Artificial Intelligence and Natural Language Processing techniques. 
+        This experience strengthened problem-solving abilities, teamwork, innovation, and real-time software development skills in a competitive environment.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Big Data Analytics Mini Project</h3>
+
+        <p>
+        Completed a  Big Data Analytics Mini Project on Amazon Product Review and Rating Analysis utilizing Apache Pig, Apache Hive, and Power BI for large-scale data processing, advanced analytical reporting, interactive data visualization, and insightful consumer behavior analysis to support data-driven decision-making.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Academic Excellence </h3>
+
+        <p>
+        Maintained outstanding academic performance throughout the B.Tech in Computer Engineering program, achieving an excellent CGPA of 9.55, reflecting strong technical proficiency, consistent dedication, analytical capability, and commitment to academic excellence.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- ================= CONTACT ================= -->
+
+<div id="contact" class="section">
+
+<h1 style="color:#ff8c00; font-size:42px; text-align:center;">
+📬 Contact Me
+</h1>
+
+<div class="card contact-card">
+
+    <h3 style="text-align:center; color:#38bdf8; margin-bottom:40px;">
+
+        I am open to Internship Opportunities, Placement Opportunities,
+        Research Collaborations, and innovative AI/ML & Data Science Projects.
+        Let’s connect and collaborate on impactful technology solutions.
+
+    </h3>
+
+    <!-- Email -->
+    <div class="contact-item">
+
+        <div class="icon">📧</div>
+
+        <div class="label">Email</div>
+
+        <div class="value">
+            <a href="mailto:rajeev.patil@mitaoe.ac.in">
+                rajeev.patil@mitaoe.ac.in
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Phone -->
+    <div class="contact-item">
+
+        <div class="icon">📱</div>
+
+        <div class="label">Phone</div>
+
+        <div class="value">
+            <a href="tel:+919022831757">
+                +91-9022831757
+            </a>
+        </div>
+
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="contact-item">
+
+        <div class="icon">💼</div>
+
+        <div class="label">LinkedIn</div>
+
+        <div class="value">
+            <a href="https://www.linkedin.com/in/rajeev-patil-86a896264" target="_blank">
+                "https://www.linkedin.com/in/rajeev-patil-86a896264"
+            </a>
+        </div>
+
+    </div>
+
+    <!-- GitHub -->
+    <div class="contact-item">
+
+        <div class="icon">💻</div>
+
+        <div class="label">GitHub</div>
+
+        <div class="value">
+            <a href="https://github.com/rajeevpatil200" target="_blank">
+                "https://github.com/rajeevpatil200"
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Resume -->
+    <div class="contact-item">
+
+        <div class="icon">📄</div>
+
+        <div class="label">Resume</div>
+
+        <div class="value">
+            <a href="https://drive.google.com/file/d/14JNOlZJhLlW8ETFIGe5cQKMyFwBZllqc/view?usp=sharing" target="_blank">
+                View Resume
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Location -->
+    <div class="contact-item">
+
+        <div class="icon">📍</div>
+
+        <div class="label">Location</div>
+
+        <div class="value">
+            Pune, Maharashtra, India
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
